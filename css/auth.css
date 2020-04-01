@@ -1,0 +1,251 @@
+html, body {
+  margin: 0;
+  padding: 0;
+
+}
+
+button:active, button:focus {
+  outline-color: transparent;
+}
+button:hover {
+  cursor: pointer;
+}
+#bg-color {
+  height: 100vh;
+  width: calc(100vw - 100px);
+  background-color: white;
+
+  padding-left: 100px;
+}
+.auth-head {
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.title-signin {
+  color: rgb(76,108,10);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 40px;
+
+  font-weight: 700;
+
+}
+.auth-leading {
+  color: rgb(88,129,7);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 20px;
+
+  font-weight: 300;
+
+}
+
+.input-wrapper {
+  height: 50px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-wrapper input {
+  background-color: transparent;
+  width: 250px;
+  border: none;
+  
+  border-bottom: 1px solid rgba(20, 20, 20, 0.4);
+  padding-bottom: 10px;
+
+  color: rgb(20, 20, 20);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 13px;
+
+  font-weight: 300;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.8);
+}
+
+.input-wrapper .error-message {
+  margin-top: -50px;
+}
+
+#sign-in-btn, #sign-up-btn {
+  border: none;   
+  background-color: transparent;
+  color: rgb(76,108,10);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 20px;
+
+  font-weight: 700;
+}
+#sign-in-btn:hover, #sign-up-btn:hover, #link-to-sign-up:hover, #link-to-sign-in:hover  {
+  cursor: pointer;
+  opacity: 0.7;
+}
+#sign-in-btn:active, #sign-up-btn:active, #link-to-sign-up:active, #link-to-sign-in:active {
+  outline: none;
+  outline-color: transparent;
+}
+
+#link-to-sign-up, #link-to-sign-in {
+  border: none;   
+  background-color: transparent;
+  color: rgb(111,143,45);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 12px;
+
+  font-weight: 300;
+}
+
+.error-message {
+  color: rgb(219,88,88);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 10px;
+
+  font-weight: 300;
+}
+
+
+/* MAIN SCREEN */
+.main-screen {
+  display: grid;
+  grid-template-rows: auto auto;
+
+}
+
+.main-screen-section {
+  padding-top: 30px;
+  padding-left: 50px;
+
+  min-height: 100vh;
+}
+
+.main-user {
+  display: flex;
+  align-items: center;
+
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 10px;
+
+  font-weight: 300;
+}
+
+.main-user div {
+  margin-right: 10px;
+}
+
+.main-user div button {
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 11px;
+
+  font-weight: 300;
+}
+.main-title {
+  color: rgb(76,108,10);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 40px;
+
+  font-weight: 700;
+}
+
+.main-leading {
+  color: rgb(76,108,10);
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 13px;
+
+  font-weight: 300;
+}
+
+/* nav-bar */
+.nav-bar {
+  display: flex;
+  margin-top: 20px
+}
+
+.nav-bar .nav {
+  border: 1px solid rgba(76,108,10, 0.8);
+  background-color: transparent;
+  height: 30px;
+  border-radius: 99px;
+
+  margin-right: 50px;
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 13px;
+  color: rgba(76,108,10, 0.7);
+
+  font-weight: 700;
+}
+
+
+.nav-bar .nav:hover {
+  cursor: pointer;
+}
+
+.form-add-borrowed-money {
+  width: 85vw;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 10px;
+
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 11px;
+  font-weight: 300;
+
+  display: grid;
+  grid-template-columns: 25% 30% 20% 20% 5%;
+  align-items: center;
+}
+
+.form-add-borrowed-money div input {
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 11px;
+  font-weight: 300;
+  border: none;
+}
+
+/* lists */
+
+.list-item {
+  width: 85vw;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-top: 15px;
+
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.05);
+
+  font-family: 'Be Vietnam', 'san-serif';
+  font-size: 11px;
+  font-weight: 300;
+
+  display: grid;
+  grid-template-columns: 25% 30% 20% 20% 5%;
+  align-items: center;
+}
+
+.img-money {
+  position: fixed;
+  right: 200px;
+  top: 200px;
+
+  animation: moneyMoving 3s ease;
+  -webkit-animation: moneyMoving 3s ease infinite;
+
+}
+
+@keyframes moneyMoving {
+  0% {top: 200px; transform: scale(1);}
+  50% {top: 170px; transform: scale(1.1)}
+  100% {top: 200px; transform: scale(1)}
+}
+
+@-webkit-keyframes moneyMoving {
+  0% {top: 200px; transform: scale(1);}
+  50% {top: 170px; transform: scale(1.1)}
+  100% {top: 200px; transform: scale(1)}
+
+}

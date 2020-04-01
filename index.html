@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/auth.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+  <!-- Put your coonfig ID in this file -->
+  <script src="./firebaseConfig.js"></script>
+  <!-- My database on firestore
+  1 collection: 'users'
+    each user has a document
+      each doc has 4 fields 
+        - email: user's email
+        - name: user's display name
+        - friendsBorrow (array): list friends, who borrow user's money
+        - iBorrow (array): list friends, whom user borrow money
+            each element of above arrays is an object with 4 props:
+              - createdAt: ISO String of Date, use as ID
+              - email: email of target friend
+              - title: message/title of the loan of money
+              - amount: the amount of money
+  -->
+
+  <script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const db = firebase.firestore();
+  </script>
+
+  <script src="./components.js"></script>
+  <script src="./view.js"></script>
+  <script src="./controller.js"></script>
+  <script src="./model.js"></script>
+
+  <script>
+    window.onload = controller.init;
+  </script>
+
+  <script id="./model.js"></script>
+  
+  <title>borrow my money</title>
+</head>
+<body>
+  <div id="app"></div>
+  
+
+</body>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+</html>

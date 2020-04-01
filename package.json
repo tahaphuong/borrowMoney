@@ -1,0 +1,19 @@
+{
+  "name": "borrowmoney",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.2",
+    "nodemailer": "^6.4.4"
+  },
+  "author": "tahaphuong",
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

@@ -9,7 +9,7 @@
     "cron": "^1.8.2",
     "express": "^4.17.1",
     "firebase-admin": "^8.9.2",
-    "nodemailer": "^6.4.4"
+    "nodemailer": "^6.4.16"
   },
   "author": "tahaphuong",
   "license": "ISC",
